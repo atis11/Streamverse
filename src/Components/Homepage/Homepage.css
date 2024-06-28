@@ -1,0 +1,91 @@
+#Homepage{
+    margin-top: 100px;
+}
+
+/* Horizontal scroll for the homepage  */
+.horizontal-scroll-homepage {
+    display: flex;
+    height: 320px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    gap: 20px;
+    align-items: center;
+}
+.horizontal-scroll-homepage::-webkit-scrollbar {
+    display: none;
+}
+
+/* top section of the home(most trending video section) */
+.most-trending-video{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    padding: 1em 2em 2em 2em;
+    gap: 0.5em;
+
+}
+.most-trending-video .video-embedd{
+    background-color: brown;
+    border-radius: 10px;
+    height: fit-content;
+}
+.most-trending-video div{
+    width:fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+}
+.most-trending-video div p{
+    font-size: 4em;
+}
+/* continue watching section */
+.continue-watching-section{
+    padding:0px 10px;
+}
+/* recommended for the user section */
+.recommended-for-you{
+    padding: 10px;
+}
+.recommended-for-you-videos{
+    padding: 10px;
+    display: grid;
+    /* place-items: center; */
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+@media screen and (max-width: 1300px) {
+    .recommended-for-you-videos{
+        grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+@media screen and (max-width: 1050px) {
+    .recommended-for-you-videos{
+        grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  
+@media screen and (max-width: 660px) {
+    .recommended-for-you-videos{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .continue-watching-section{
+        display: none;
+    }
+    .recommended-for-you h2{
+        display: none;
+    }
+  }
+  
+@media screen and (max-width: 900px) {
+    .most-trending-video{
+        display: none;
+    }
+  }
+  
